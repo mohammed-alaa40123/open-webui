@@ -35,7 +35,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v2
         with:
           appSourcePath: ${{ github.workspace }}
-          _dockerfilePathKey_: _dockerfilePath_
+          dockerfilePath: ${{ github.workspace }}/Dockerfile
           registryUrl: 
           registryUsername: ${{ secrets.OPENCHAT_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.OPENCHAT_REGISTRY_PASSWORD }}
